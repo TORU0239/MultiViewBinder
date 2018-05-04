@@ -46,17 +46,24 @@ public class MainActivity extends AppCompatActivity {
         items.add(new MainBannerData("Grab", "www.grab.com"));
         items.add(new MainBannerData("Uber", "www.uber.com"));
 
-        items.add(new MainProductData("Product1", 10));
-        items.add(new MainProductData("Product2", 20));
-        items.add(new MainProductData("Product3", 30));
-        items.add(new MainProductData("Product4", 40));
-        items.add(new MainProductData("Product5", 50));
+        ArrayList<ListItemType> items2 = new ArrayList<>();
 
-        items.add(new MainProductData("Product6", 60));
-        items.add(new MainProductData("Product7", 70));
-        items.add(new MainProductData("Product8", 80));
+        items2.add(new MainProductData("Product1", 10));
+        items2.add(new MainProductData("Product2", 20));
+        items2.add(new MainProductData("Product3", 30));
+        items2.add(new MainProductData("Product4", 40));
+        items2.add(new MainProductData("Product5", 50));
 
-        adapter.setItems(items);
-        adapter.notifyDataSetChanged();
+        items2.add(new MainProductData("Product6", 60));
+        items2.add(new MainProductData("Product7", 70));
+        items2.add(new MainProductData("Product8", 80));
+
+        adapter.setItems(items2);
+        adapter.notifyItemInserted(items2.size());
+
+        adapter.setItems(items, false);
+        adapter.notifyItemInserted(items.size());
+
+//        adapter.notifyDataSetChanged();
     }
 }

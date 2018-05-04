@@ -23,8 +23,20 @@ public class MainAdapter extends RecyclerView.Adapter {
         this.items = items;
     }
 
-    public void setItems(@NonNull ArrayList<ListItemType> items) {
-        this.items = items;
+    public void setItems(@NonNull ArrayList<ListItemType> newItems){
+        setItems(newItems, false);
+
+    }
+
+    public void setItems(@NonNull ArrayList<ListItemType> newItems, boolean reset) {
+        if(reset){
+            this.items.clear();
+            this.items = new ArrayList<>();
+            this.items = newItems;
+        }
+        else{
+            this.items.addAll(this.items.size(), newItems);
+        }
     }
 
     @NonNull
