@@ -3,6 +3,8 @@ package my.com.toru.multiviewbinder.main.data;
 import my.com.toru.multiviewbinder.uicomponent.ListItemType;
 
 public final class MainProductData implements ListItemType{
+    public static final int TYPE = 1;
+
     private String name;
     private int count;
 

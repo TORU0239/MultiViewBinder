@@ -11,14 +11,9 @@ public abstract class AbsViewRenderer<M extends ListItemType, VH extends Recycle
     private Context context;
 
     @NonNull
-    private ListItemType type;
+    private int type;
 
-    public AbsViewRenderer(@NonNull Context ctx, @NonNull ListItemType type) {
-        this.context = ctx;
-        this.type = type;
-    }
-
-    public AbsViewRenderer(@NonNull ListItemType type) {
+    public AbsViewRenderer(@NonNull int type) {
         this.type = type;
     }
 
@@ -33,7 +28,7 @@ public abstract class AbsViewRenderer<M extends ListItemType, VH extends Recycle
 
     @NonNull
     public int getType() {
-        return type.getListItemType();
+        return type;
     }
 
     // create viewholder

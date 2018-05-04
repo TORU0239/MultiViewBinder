@@ -3,6 +3,8 @@ package my.com.toru.multiviewbinder.main.data;
 import my.com.toru.multiviewbinder.uicomponent.ListItemType;
 
 public final class MainBannerData implements ListItemType{
+    public static final int ITEM = 0;
+
     private String name;
     private String url;
 

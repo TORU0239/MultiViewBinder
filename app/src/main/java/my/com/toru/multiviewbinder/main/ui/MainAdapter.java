@@ -23,6 +23,10 @@ public class MainAdapter extends RecyclerView.Adapter {
         this.items = items;
     }
 
+    public void setItems(@NonNull ArrayList<ListItemType> items) {
+        this.items = items;
+    }
+
     @NonNull
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
