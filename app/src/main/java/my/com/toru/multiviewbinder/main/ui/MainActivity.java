@@ -10,6 +10,8 @@ import java.util.ArrayList;
 
 import my.com.toru.multiviewbinder.R;
 import my.com.toru.multiviewbinder.main.data.MainBannerData;
+import my.com.toru.multiviewbinder.main.data.MainHorizontalData;
+import my.com.toru.multiviewbinder.main.data.MainHorizontalDataDetail;
 import my.com.toru.multiviewbinder.main.data.MainListData;
 import my.com.toru.multiviewbinder.main.data.MainProductData;
 import my.com.toru.multiviewbinder.uicomponent.ListItemType;
@@ -43,6 +45,10 @@ public class MainActivity extends AppCompatActivity {
         listRender.setContext(this);
         adapter.registerRenderer(listRender);
 
+        MainHorizontalRenderer horizontalRenderer = new MainHorizontalRenderer(MainHorizontalData.TYPE);
+        horizontalRenderer.setContext(this);
+        adapter.registerRenderer(horizontalRenderer);
+
         initRender();
     }
 
@@ -50,6 +56,8 @@ public class MainActivity extends AppCompatActivity {
         ArrayList<ListItemType> items = new ArrayList<>();
         ArrayList<ListItemType> items2 = new ArrayList<>();
         ArrayList<ListItemType> item3 = new ArrayList<>();
+
+        ArrayList<ListItemType> item4 = new ArrayList<>();
 
         items.add(new MainBannerData("Google", "www.google.com"));
         items.add(new MainBannerData("Apple", "www.apple.com"));
@@ -95,13 +103,34 @@ public class MainActivity extends AppCompatActivity {
         item3.add(new MainListData("Christine", "Female", "Kepong"));
         item3.add(new MainListData("Henry", "Male", "Sunway"));
 
+
+        ArrayList<MainHorizontalDataDetail> details = new ArrayList<>();
+        details.add(new MainHorizontalDataDetail("NU SENTRAL", "10,000", "20PS"));
+        details.add(new MainHorizontalDataDetail("SEPHORA", "1,000", "5PS"));
+        details.add(new MainHorizontalDataDetail("11STREET", "5,000", "20PS"));
+        details.add(new MainHorizontalDataDetail("LAZADA", "10,000", "20PS"));
+        details.add(new MainHorizontalDataDetail("QOO10", "10,000", "20PS"));
+        details.add(new MainHorizontalDataDetail("JD.COM", "10,000", "20PS"));
+        details.add(new MainHorizontalDataDetail("ALI EXPRESS", "10,000", "20PS"));
+        details.add(new MainHorizontalDataDetail("GUARDIAN", "10,000", "20PS"));
+        details.add(new MainHorizontalDataDetail("XIAOMI", "10,000", "20PS"));
+        details.add(new MainHorizontalDataDetail("OPPO", "10,000", "20PS"));
+
+        item4.add(new MainHorizontalData(details));
+
         adapter.setItems(items, false);
         adapter.notifyItemInserted(items.size());
 
         adapter.setItems(item3);
         adapter.notifyItemInserted(item3.size());
 
+        adapter.setItems(item4);
+        adapter.notifyItemInserted(item4.size());
+
         adapter.setItems(items2,false);
         adapter.notifyItemInserted(items2.size());
+        
+        adapter.setItems(item4);
+        adapter.notifyItemInserted(item4.size());
     }
 }
