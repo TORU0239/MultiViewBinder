@@ -1,4 +1,4 @@
-package my.com.toru.multiviewbinder.main.ui;
+package my.com.toru.multiviewbinder.main.ui.renderer;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -6,6 +6,7 @@ import android.view.ViewGroup;
 
 import my.com.toru.multiviewbinder.R;
 import my.com.toru.multiviewbinder.main.data.MainProductData;
+import my.com.toru.multiviewbinder.main.ui.viewholder.MainProductViewHolder;
 import my.com.toru.multiviewbinder.uicomponent.AbsViewRenderer;
 
 public class MainProductRender extends AbsViewRenderer<MainProductData, MainProductViewHolder> {

@@ -1,4 +1,4 @@
-package my.com.toru.multiviewbinder.main.ui;
+package my.com.toru.multiviewbinder.main.ui.renderer;
 
 import android.support.annotation.NonNull;
 import android.view.LayoutInflater;
@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 
 import my.com.toru.multiviewbinder.R;
 import my.com.toru.multiviewbinder.main.data.MainHorizontalData;
+import my.com.toru.multiviewbinder.main.ui.viewholder.MainHorizontalViewHolder;
 import my.com.toru.multiviewbinder.uicomponent.AbsViewRenderer;
 
 public class MainHorizontalRenderer extends AbsViewRenderer<MainHorizontalData, MainHorizontalViewHolder> {

@@ -1,4 +1,4 @@
-package my.com.toru.multiviewbinder.main.ui;
+package my.com.toru.multiviewbinder.main.ui.viewholder;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
@@ -19,7 +19,7 @@ public class MainBannerViewHolder extends RecyclerView.ViewHolder {
         urlTxt = itemView.findViewById(R.id.banner_url);
     }
 
-    protected void bindDataToView(MainBannerData data){
+    public void bindDataToView(MainBannerData data){
         nameTxt.setText(data.getName());
         urlTxt.setText(data.getUrl());
     }

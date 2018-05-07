@@ -1,4 +1,4 @@
-package my.com.toru.multiviewbinder.main.ui;
+package my.com.toru.multiviewbinder.main.ui.viewholder;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
@@ -22,7 +22,7 @@ public class MainListViewHolder extends RecyclerView.ViewHolder {
         addressTxt = itemView.findViewById(R.id.list_address);
     }
 
-    protected void bindDataToView(MainListData data){
+    public void bindDataToView(MainListData data){
         nameTxt.setText(data.getName());
         genderTxt.setText(data.getGender());
         addressTxt.setText(data.getAddress());

@@ -1,4 +1,4 @@
-package my.com.toru.multiviewbinder.main.ui;
+package my.com.toru.multiviewbinder.main.ui.viewholder;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
@@ -20,7 +20,7 @@ public class MainProductViewHolder extends RecyclerView.ViewHolder {
         countTxt = itemView.findViewById(R.id.product_count);
     }
 
-    protected void bindDataToView(MainProductData data){
+    public void bindDataToView(MainProductData data){
         nameTxt.setText(data.getName());
         countTxt.setText(String.valueOf(data.getCount()));
     }

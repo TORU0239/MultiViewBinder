@@ -14,6 +14,10 @@ import my.com.toru.multiviewbinder.main.data.MainHorizontalData;
 import my.com.toru.multiviewbinder.main.data.MainHorizontalDataDetail;
 import my.com.toru.multiviewbinder.main.data.MainListData;
 import my.com.toru.multiviewbinder.main.data.MainProductData;
+import my.com.toru.multiviewbinder.main.ui.renderer.MainBannerRender;
+import my.com.toru.multiviewbinder.main.ui.renderer.MainHorizontalRenderer;
+import my.com.toru.multiviewbinder.main.ui.renderer.MainListRender;
+import my.com.toru.multiviewbinder.main.ui.renderer.MainProductRender;
 import my.com.toru.multiviewbinder.uicomponent.ListItemType;
 
 public class MainActivity extends AppCompatActivity {
