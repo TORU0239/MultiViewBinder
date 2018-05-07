@@ -1,5 +1,6 @@
 package my.com.toru.multiviewbinder.main.ui;
 
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
@@ -18,6 +19,7 @@ public class MainHorizontalViewHolder extends RecyclerView.ViewHolder {
         recyclerView = itemView.findViewById(R.id.horizontal_recyclerview);
         adapter = new MainHorizontalDetailAdapter(itemView.getContext());
         recyclerView.setAdapter(adapter);
+        recyclerView.setLayoutManager(new LinearLayoutManager(itemView.getContext(), LinearLayoutManager.HORIZONTAL, false));
     }
 
     protected void bindItem(List<MainHorizontalDataDetail> horizontalDataDetailList){

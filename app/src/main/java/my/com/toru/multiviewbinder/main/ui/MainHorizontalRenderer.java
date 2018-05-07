@@ -22,6 +22,6 @@ public class MainHorizontalRenderer extends AbsViewRenderer<MainHorizontalData, 
 
     @Override
     public void bindView(MainHorizontalData model, MainHorizontalViewHolder viewHolder) {
-        viewHolder.bindItem();
+        viewHolder.bindItem(model.getHorizontalDetailDataList());
     }
 }
