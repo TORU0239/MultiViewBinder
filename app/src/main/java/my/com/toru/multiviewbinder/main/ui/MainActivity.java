@@ -129,5 +129,8 @@ public class MainActivity extends AppCompatActivity {
 
         adapter.setItems(items2,false);
         adapter.notifyItemInserted(items2.size());
+        
+        adapter.setItems(item4);
+        adapter.notifyItemInserted(item4.size());
     }
 }
