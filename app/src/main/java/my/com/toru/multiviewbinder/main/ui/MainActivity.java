@@ -37,19 +37,19 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setAdapter(adapter);
         recyclerView.addItemDecoration(new DividerItemDecoration(this, DividerItemDecoration.VERTICAL));
 
-        MainBannerRender bannerRender = new MainBannerRender(MainBannerData.ITEM);
+        MainBannerRender bannerRender = new MainBannerRender(MainBannerData.Companion.getITEM());
         bannerRender.setContext(this);
         adapter.registerRenderer(bannerRender);
 
-        MainProductRender productRender = new MainProductRender(MainProductData.TYPE);
+        MainProductRender productRender = new MainProductRender(MainProductData.Companion.getTYPE());
         productRender.setContext(this);
         adapter.registerRenderer(productRender);
 
-        MainListRender listRender = new MainListRender(MainListData.TYPE);
+        MainListRender listRender = new MainListRender(MainListData.Companion.getTYPE());
         listRender.setContext(this);
         adapter.registerRenderer(listRender);
 
-        MainHorizontalRenderer horizontalRenderer = new MainHorizontalRenderer(MainHorizontalData.TYPE);
+        MainHorizontalRenderer horizontalRenderer = new MainHorizontalRenderer(MainHorizontalData.Companion.getTYPE());
         horizontalRenderer.setContext(this);
         adapter.registerRenderer(horizontalRenderer);
 
